@@ -3,7 +3,7 @@
 # Script:                       Ops 301 Challenge 05
 # Author:                       Jeremy Burks
 # Date of latest revision:      05/02/22
-# Purpose:                      Display & clear syslog/wtmp logs. Menu system for user to select different options  
+# Purpose:                      Display & clear syslog/wtmp/auth logs. Menu system for user to select different options  
 
 # Variables--for text color 
 RED='\033[0;31m'
@@ -19,6 +19,8 @@ do
     echo "Press 2 to view the cleared syslog"
     echo "Press 3 to view and clear the wtmp log"
     echo "Press 4 to view cleared wtmp log"
+    echo "Press 5 to view auth.log"
+    echo "Press 6 to clear auth.log"
     echo "Press 0 to exit the menu"
     read user_in
 
@@ -42,7 +44,19 @@ do
     echo "wtmp contents: "
     cat /var/log/wtmp
     fi
+    if [ $user_in == "5" ]; then
+    echo "auth.log contents: "
+    cat /var/log/auth.log
+    fi
+    if [ $user_in == "6" ]; then
+    echo "Clearing auth.log..."
+    cat /dev/null > /var/log/auth.log
+    fi
     if [ $user_in == "0" ]; then
     echo "Exiting the menu"
     fi
 done
+
+# syslog track data about status, events, diagnostics within the system. It is an important logging sytem that can help identify events and their severity.
+# wtmp keeps a record of all logins and logouts. This log is important for analysis if there is suspicious activity in the system.
+# auth.log keeps a record of all authentications information, including user logins and authentication machinsm that were used. The importance of this log implied within its contents.
