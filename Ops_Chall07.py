@@ -33,4 +33,9 @@ print_path(file_path)
 
 # End
 
+# Filepath for demo
 # /home/irondruid/Ops201-Lab-02/Ops301-Challenges-/pythontest
+
+# Resources:
+# https://www.programiz.com/python-programming/file-operation
+# https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
