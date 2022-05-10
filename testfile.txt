@@ -1,4 +1,0 @@
-/home/irondruid/Ops201-Lab-02/Ops301-Challenges-/pythontestdoubletest
-test2.txt
-test1.txt
-/home/irondruid/Ops201-Lab-02/Ops301-Challenges-/pythontest/doubletesttestnumber2.txt
