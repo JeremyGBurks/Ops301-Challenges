@@ -1,0 +1,1 @@
+scputimes(user=71.22, nice=28.8, system=48.3, idle=1101.92, iowait=67.63, irq=0.0, softirq=5.2, steal=0.0, guest=0.0, guest_nice=0.0)
